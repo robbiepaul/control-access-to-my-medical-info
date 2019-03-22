@@ -1,0 +1,37 @@
+{% extends 'layouts/layout-transactional.html' %}
+
+{% block pageTitle %}
+   Start - Control access to my medical information
+{% endblock %}
+
+{% block beforeContent %}
+{{ breadcrumb({
+href: "/",
+text: "Home"
+}) }}
+{% endblock %}
+
+{% block content %}
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-full">
+
+    <h1>
+      Who has access to your medical information
+    </h1>
+
+    <div class="nhsuk-panel">
+      <table>
+        <thead>
+          <tr>
+            <td></td>
+            <td>Name</td>
+            <td>Date given</td>
+            <td>Access level</td>
+          </tr>
+        </thead>
+      </table>
+    </div>
+  </div>
+
+</div>
+{% endblock %}
