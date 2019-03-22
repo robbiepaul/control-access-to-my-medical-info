@@ -1,0 +1,95 @@
+{% extends 'layouts/layout-transactional.html' %}
+
+{% block pageTitle %}
+   Start - Control access to my medical information
+{% endblock %}
+
+{% block beforeContent %}
+{{ breadcrumb({
+href: "/",
+text: "Home"
+}) }}
+{% endblock %}
+
+{% block content %}
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-full">
+    <a href="dashboard" class="nhsuk-back-link__link">
+    <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
+    </svg>
+    Back to dashboard</a>
+    <dl class="nhsuk-summary-list">
+
+      <div class="nhsuk-summary-list__row">
+        <dt class="nhsuk-summary-list__key">
+          Institution Name
+        </dt>
+        <dd class="nhsuk-summary-list__value">
+          {{ data['name'] }}
+        </dd>
+      </div>
+
+      <div class="nhsuk-summary-list__row">
+        <dt class="nhsuk-summary-list__key">
+          Phone number
+        </dt>
+        <dd class="nhsuk-summary-list__value">
+          {{ data['phone-number'] }}
+        </dd>
+      </div>
+
+      <div class="nhsuk-summary-list__row">
+        <dt class="nhsuk-summary-list__key">
+          Reason
+        </dt>
+        <dd class="nhsuk-summary-list__value">
+          {{ data['reason'] }}
+        </dd>
+      </div>
+
+      <div class="nhsuk-summary-list__row">
+        <dt class="nhsuk-summary-list__key">
+          Phone number
+        </dt>
+        <dd class="nhsuk-summary-list__value">
+          {{ data['phone-number'] }}
+        </dd>
+      </div>
+
+      <div class="nhsuk-summary-list__row">
+        <dt class="nhsuk-summary-list__key">
+          E-mail address
+        </dt>
+        <dd class="nhsuk-summary-list__value">
+          {{ data['email-address'] }}
+        </dd>
+      </div>
+
+      <div class="nhsuk-summary-list__row">
+        <dt class="nhsuk-summary-list__key">
+          Permissions
+        </dt>
+        <dd class="nhsuk-summary-list__value">
+          <ul class="nhsuk-list nhsuk-u-margin-bottom-1">
+            {% for item in data['permissions'] %}
+              <li>{{ item }}</li>
+            {% else %}
+              <li>No permissions asked</li>
+            {% endfor %}
+          </ul>
+        </dd>
+      </div>
+    </dl>
+    <div>
+      <a href="#" class="nhsuk-button">Confirm</a>
+    </div>
+    <div>
+      <a href="#" class="nhsuk-button">Deny</a>
+    </div>
+    <div>
+      <a href="mailto:{{ data['email-address'] }}">Ask for more Information</a>
+    </div>
+  </div>
+</div>
+{% endblock %}
