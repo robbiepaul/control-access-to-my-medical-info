@@ -1,7 +1,7 @@
 {% extends 'layouts/layout-transactional.html' %}
 
 {% block pageTitle %}
-   Start - Control access to my medical information
+   Dashboard - Control access to my medical information
 {% endblock %}
 
 {% block beforeContent %}
@@ -14,7 +14,14 @@ text: "Home"
 {% block content %}
 <div class="nhsuk-grid-row">
   <div class="nhsuk-grid-column-full">
-
+    <div class="nhsuk-panel-with-label">
+      <h3 class="nhsuk-panel-with-label__label">You have one new request</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec mollis rutrum ante. Quisque scelerisque eleifend iaculis. Suspendisse potenti.</p>
+      <div style="text-align: right;">
+        <a href="#" class="nhsuk-button" style="margin-bottom: 0">Accept</a>
+        <a href="#" class="nhsuk-button nhsuk-button--secondary" style="margin-bottom: 0">Decline</a>
+      </div>
+    </div>
     <h1>
       Who has access to your medical information
     </h1>
@@ -22,65 +29,23 @@ text: "Home"
       <table>
         <thead>
           <tr>
-            <td>Name</td>
-            <td>Date given</td>
-            <td>Access permissions</td>
-            <td></td>
+            <th>Name</th>
+            <th>Date given</th>
+            <th>Access permissions</th>
+            <th></th>
           </tr>
         </thead>
         <tr>
           <td>Local Clinic</td>
-          <td>2018-09-15 onwards</td>
-          <td>Contact Info, Medication, Allergies, Observations</td>
-          <td><a href="/has-access" name="local-clinic" type="submit">More info</a></td>
+          <td>15th September 2018</td>
+          <td>Contact details, Medication, Allergies, Conditions</td>
+          <td><a href="/has-access">Remove access</a></td>
         </tr>
         <tr>
           <td>Private therapist</td>
-          <td>2018-08-12 to 2019-08-12</td>
-          <td>Contact Info, Medication, Observations</td>
-          <td><a href="/has-access">More info</a></td>
-        </tr>
-      </table>
-    </div>
-    <h1>
-      Who is requesting access to your medical information
-    </h1>
-    <div class="nhsuk-panel">
-      <table>
-        <thead>
-          <tr>
-            <td>Name</td>
-            <td>Date asked</td>
-            <td>Reason</td>
-            <td></td>
-          </tr>
-        </thead>
-        <tr>
-          <td>Name</td>
-          <td>Date asked</td>
-          <td>Appointment for </td>
-          <td><a class="nhsuk-button" href="/request-access">View</a></td>
-        </tr>
-      </table>
-    </div>
-
-    <h1>
-      Who doesn't have access to your medical information
-    </h1>
-
-    <div class="nhsuk-panel">
-      <table>
-        <thead>
-          <tr>
-            <td>Name</td>
-            <td>Denied on</td>
-            <td></td>
-          </tr>
-        </thead>
-        <tr>
-          <td>Name</td>
-          <td>2018-02-23</td>
-          <td>View history</td>
+          <td>12th May 2015</td>
+          <td>Contact details, Medication, Conditions</td>
+          <td><a href="/has-access">Remove access</a></td>
         </tr>
       </table>
     </div>
