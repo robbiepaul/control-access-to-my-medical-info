@@ -14,28 +14,8 @@ text: "Home"
 {% block content %}
 <div class="nhsuk-grid-row">
   <div class="nhsuk-grid-column-full">
-    <div class="nhsuk-panel-with-label">
-      <h3 class="nhsuk-panel-with-label__label">You have one new request</h3>
-      <p>Sue Smith from the <strong>Department for Work and Pensions</strong> has requested your medical history.</p>
-      <p>By agreeing to share your information you may save time during your meeting.</p>
-      <details class="nhsuk-details" open="">
-        <summary class="nhsuk-details__summary" role="button" aria-controls="details-content-0" aria-expanded="true">
-        <span class="nhsuk-details__summary-text">
-          What information do they want to access?
-        </span>
-            </summary>
-            <div class="nhsuk-details__text" id="details-content-0" aria-hidden="false">
-              <ul>
-                <li>Contact details</li>
-                <li>Medical conditions</li>
-              </ul>
-            </div>
-          </details>
-
-      <div style="text-align: right;">
-        <a href="/dashboard-accept" class="nhsuk-button" style="margin-bottom: 0">Accept</a>
-        <a href="#" class="nhsuk-button nhsuk-button--secondary" style="margin-bottom: 0">Decline</a>
-      </div>
+    <div class="nhsuk-warning-callout" style="padding-top: 32px !important; margin-top: 0">
+      <p>You have granted access to <strong>Department for Work and Pensions</strong>. You can remove the access at any time.</p>
     </div>
     <h1>
       Who has access to your medical information
@@ -50,6 +30,12 @@ text: "Home"
             <th></th>
           </tr>
         </thead>
+        <tr>
+          <td>Department for Work and Pensions</td>
+          <td>23rd March 2019</td>
+          <td>Contact details, Conditions</td>
+          <td><a href="/remove-access">Remove access</a></td>
+        </tr>
         <tr>
           <td>Local Clinic</td>
           <td>15th September 2018</td>

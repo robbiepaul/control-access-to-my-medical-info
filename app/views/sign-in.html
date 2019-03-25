@@ -1,4 +1,4 @@
-{% extends 'layouts/layout-transactional.html' %}
+{% extends 'layouts/layout-loggedout.html' %}
 
 {% block pageTitle %}
    Sign in - Control access to my medical information
@@ -32,8 +32,8 @@ text: "Home"
       <input class="nhsuk-input" id="input-password" name="password" type="password">
     </div>
 
-    <a href="/dashboard" class="nhsuk-button nhsuk-u-margin-bottom-8">
-      Sign In
+    <a href="/set-preferences" class="nhsuk-button nhsuk-u-margin-bottom-8">
+      Sign in
     </a>
 
   </div>

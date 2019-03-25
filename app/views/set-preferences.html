@@ -1,0 +1,62 @@
+{% extends 'layouts/layout-transactional.html' %}
+
+{% block pageTitle %}
+   Dashboard - Control access to my medical information
+{% endblock %}
+
+{% block beforeContent %}
+{{ breadcrumb({
+href: "/",
+text: "Home"
+}) }}
+{% endblock %}
+
+{% block content %}
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-u-two-thirds">
+    <h1>How do you want to give permission to a requester?</h1>
+    <div class="nhsuk-form-group">
+
+      <fieldset class="nhsuk-fieldset">
+        <div class="nhsuk-radios">
+          <div class="nhsuk-radios__item">
+            <input class="nhsuk-radios__input" id="gov-1" name="gov" type="radio" value="gateway" aria-describedby="gov-1-item-hint">
+            <label class="nhsuk-label nhsuk-radios__label" for="gov-1">
+              Email
+            </label>
+            <span class="nhsuk-hint nhsuk-radios__hint context" id="gov-1-item-hint">
+              <input type="text" class="nhsuk-input nhsuk-input--width-30" value="sally.smith@gmail.com">
+            </span>
+          </div>
+          <div class="nhsuk-radios__item">
+            <input class="nhsuk-radios__input" id="gov-2" name="gov" type="radio" value="verify" aria-describedby="gov-2-item-hint">
+            <label class="nhsuk-label nhsuk-radios__label" for="gov-2">
+              Text message
+            </label>
+            <span class="nhsuk-hint nhsuk-radios__hint context" id="gov-2-item-hint">
+              <input type="text" class="nhsuk-input nhsuk-input--width-30" value="07891 111 111">
+            </span>
+          </div>
+          <div class="nhsuk-radios__item">
+            <input class="nhsuk-radios__input" id="gov-3" name="gov" type="radio" value="verify" aria-describedby="gov-2-item-hint">
+            <label class="nhsuk-label nhsuk-radios__label" for="gov-2">
+              Phone call
+            </label>
+            <span class="nhsuk-hint nhsuk-radios__hint context" id="gov-3-item-hint">
+              <input type="text" class="nhsuk-input nhsuk-input--width-30" value="07891 111 111">
+            </span>
+          </div>
+        </div>
+      </fieldset>
+
+      <div class="nhsuk-inset-text">
+        <p>You will always have the option to sign in to this service to approve a requester's access.</p>
+      </div>
+
+      <p style="margin-top:30px;"><a href="/dashboard" class="nhsuk-button">Save</a></p>
+
+    </div>
+
+  </div>
+</div>
+{% endblock %}

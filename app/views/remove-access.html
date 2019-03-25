@@ -1,0 +1,27 @@
+{% extends 'layouts/layout-transactional.html' %}
+
+{% block pageTitle %}
+   Start - Control access to my medical information
+{% endblock %}
+
+{% block beforeContent %}
+{{ breadcrumb({
+href: "/",
+text: "Home"
+}) }}
+{% endblock %}
+
+{% block content %}
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-two-thirds">
+    <div class="nhsuk-panel-with-label">
+      <h3 class="nhsuk-panel-with-label__label">Remove Private therapist's access</h3>
+      <p>By removing <strong>Private therapist</strong>'s access they will no longer be able to view your medical information and may impact the services they can give you.</p>
+      <div style="text-align: right;">
+        <a href="/dashboard-removed" class="nhsuk-button" style="margin-bottom: 0">Yes, remove access</a>
+        <a href="#" class="nhsuk-button nhsuk-button--secondary" style="margin-bottom: 0">Cancel</a>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

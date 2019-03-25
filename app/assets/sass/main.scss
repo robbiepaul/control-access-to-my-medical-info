@@ -8,3 +8,22 @@
 ///////////////////////////////////////////
 // Add your custom CSS/Sass styles below... 
 ///////////////////////////////////////////
+
+.welcome-back {
+  text-align: right;
+  float: right;
+  width: 30%;
+  margin-top: 25px;
+  color: white;
+}
+
+.nhsuk-input--width-30 {
+  max-width: 30ex;
+}
+
+.context {
+  border-left: 3px $color_nhsuk-grey-4 solid;
+  padding: 10px;
+  margin-top: 10px;
+  margin-left: -20px;
+}
